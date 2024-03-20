@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Net;
+using System.Xml;
 
 Console.Title = "Net70 - port 12309";
 
@@ -7,7 +8,7 @@ var builder = WebApplication.CreateBuilder();
 builder.Services.AddServiceModelServices();
 builder.Services.AddServiceModelMetadata();
 builder.Services.AddSingleton<IServiceBehavior, UseRequestHeadersForMetadataAddressBehavior>();
-builder.WebHost.UseNetTcp(12309);
+builder.WebHost.UseNetTcp(IPAddress.IPv6Any, 12309);
 
 var app = builder.Build();
 

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -7,6 +7,10 @@
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Spectre.Console" Version="0.48.0" />
+	</ItemGroup>
 
 	<ItemGroup>
 	  <Reference Include="System.Configuration" />
